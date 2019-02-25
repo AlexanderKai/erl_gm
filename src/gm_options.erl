@@ -11,6 +11,7 @@
 
 opt('+adjoin') -> {"+adjoin"};
 opt(adjoin) -> {"-adjoin"};
+opt(auto_orient) -> {"-auto-orient"};
 opt({background, Color}) ->
   {"-background", ":color", [{color, Color}]};
 opt({blur, Radius, Sigma}) ->
