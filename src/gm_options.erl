@@ -39,6 +39,8 @@ opt({define, Key, Value}) ->
     {key, Key},
     {value, Value}
   ]};
+opt({density, Resolution}) ->
+    {"-density", ":wx:h", [{w, Resolution}, {h, Resolution}]};
 opt({dissolve, Percent}) ->
   {"-dissolve", ":percent", [{percent, Percent}]};
 opt({draw, Primitive, XInset, YInset}) ->
@@ -105,6 +107,8 @@ opt({output_directory, Dir}) ->
   {"-output-directory", ":output_directory", [{output_directory, Dir}]};
 opt({quality, Quality}) ->
   {"-quality", ":quality", [{quality, Quality}]};
+opt({resample, Resolution}) ->
+    {"-resample", ":wx:h", [{w, Resolution}, {h, Resolution}]};
 opt({resize, Width, Height}) ->
   {"-resize", ":widthx:height", [
     {width, Width},
